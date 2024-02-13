@@ -22,7 +22,8 @@ return {
 
             -- keymaps
             vim.keymap.set('n', 'K', vim.lsp.buf.hover, {})
-            vim.keymap.set('n', 'gd', vim.lsp.buf.definition, {})
+            vim.keymap.set('n', '<Leader>gd', vim.lsp.buf.definition, {})
+            vim.keymap.set('n', '<Leader>rr', vim.lsp.buf.rename, {})
             vim.keymap.set({ 'n', 'v' }, '<Leader>ca', vim.lsp.buf.code_action, {})
         end,
     },
@@ -36,7 +37,7 @@ return {
         "williamboman/mason-lspconfig.nvim",
         config = function()
             require("mason-lspconfig").setup({
-                ensure_installed = { "lua_ls", "rust_analyzer", "clangd", "pyright" }
+                ensure_installed = { "lua_ls", "rust_analyzer", "clangd", "pyright", }
             })
         end,
     }
