@@ -23,3 +23,9 @@ vim.opt.termguicolors = true
 vim.g.mapleader = " "
 
 vim.cmd("set ttimeoutlen=100")
+
+vim.opt.undofile = true
+
+vim.cmd("set guicursor=n-v-c:block")
+vim.cmd(":set guicursor=n:blinkon100")
+
